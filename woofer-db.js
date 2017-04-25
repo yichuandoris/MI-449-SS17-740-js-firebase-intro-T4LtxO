@@ -48,7 +48,7 @@ firebase.database().ref('woofs').child(woofKey).child('text'). set(woofText)
 // DELETE the woof from Firebase
 function deleteWoofFromDatabase (woofKey) {
   // TODO delete the record from Firebase
-firebase.database().ref('woofs').remove()
+firebase.database().ref('woofs').child(woofKey).remove()
 }
 
 // Load all of the data
